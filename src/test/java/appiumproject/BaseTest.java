@@ -68,6 +68,14 @@ public class BaseTest {
         ));
     }
 
+    public void dragAndDropAction(WebElement ele, int endX, int endY ){
+        ((JavascriptExecutor) driver).executeScript("mobile: dragGesture", ImmutableMap.of(
+                "elementId", ((RemoteWebElement) ele).getId(),
+                "endX", endX,
+                "endY", endY
+        ));
+    }
+
 
     public Double getFormattedAmount(String amount) {
         Double price = Double.parseDouble(amount.substring(1));
