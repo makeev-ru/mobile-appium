@@ -1,17 +1,17 @@
 package appiumproject;
 
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.DeviceRotation;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
-public class ComplexTest extends BaseTest{
+public class RotateAndPasteTest extends BaseTest{
 
     @Test
-    public void RotateAndPasteTest() throws MalformedURLException {
-
-
+    public void RotateAndPaste() {
         driver.findElement(AppiumBy.accessibilityId("Preference")).click();
         driver.findElement(AppiumBy.accessibilityId("3. Preference dependencies")).click();
         driver.findElement(AppiumBy.id("android:id/checkbox")).click();
@@ -23,7 +23,6 @@ public class ComplexTest extends BaseTest{
         driver.findElement(AppiumBy.xpath("(//android.widget.RelativeLayout)[2]")).click();
         driver.findElement(AppiumBy.id("android:id/edit")).sendKeys(driver.getClipboardText());
         driver.findElement(AppiumBy.id("android:id/button1")).click();
-
-
+        driver.pressKey(new KeyEvent(AndroidKey.HOME));
     }
 }
