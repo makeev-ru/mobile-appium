@@ -33,7 +33,8 @@ public class BaseTest {
 
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("mobauto");
-        options.setApp("//Users//rpryimak//mobauto//src//test//java//appiumproject//resources//ApiDemos-debug.apk");
+//        options.setApp("//Users//rpryimak//mobauto//src//test//java//appiumproject//resources//ApiDemos-debug.apk");
+        options.setApp("//Users//rpryimak//mobauto//src//test//java//appiumproject//resources//General-Store.apk");
 
         String service_url = service.getUrl().toString();
         driver = new AndroidDriver(new URL(service_url), options);
