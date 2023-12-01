@@ -35,6 +35,7 @@ public class BaseTest {
         options.setDeviceName("mobauto");
 //        options.setApp("//Users//rpryimak//mobauto//src//test//java//appiumproject//resources//ApiDemos-debug.apk");
         options.setApp("//Users//rpryimak//mobauto//src//test//java//appiumproject//resources//General-Store.apk");
+        options.setChromedriverExecutable("/opt/homebrew/Caskroom/chromedriver/113/chromedriver-mac-arm64/chromedriver");
 
         String service_url = service.getUrl().toString();
         driver = new AndroidDriver(new URL(service_url), options);
@@ -43,7 +44,7 @@ public class BaseTest {
 
     }
 
-    public void LongPressAction(WebElement element) {
+    public void longPressAction(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("mobile: longClickGesture",
                 ImmutableMap.of("elementId", ((RemoteWebElement) element).getId(),
                         "duration", 2000));
@@ -81,7 +82,6 @@ public class BaseTest {
     public Double getFormattedAmount(String amount) {
         Double price = Double.parseDouble(amount.substring(1));
         return price;
-
     }
 
     @AfterClass
