@@ -37,8 +37,10 @@ public class eCommerce_TC_4 extends BaseTest {
 //        }
 
         driver.context("WEBVIEW_com.androidsample.generalstore");
-        driver.findElement(By.xpath("//android.widget.Button[@resource-id='KByQx']")).click();
-        driver.findElement(By.id("L2AGLb")).click();
-        driver.findElement(By.id("XSqSsc")).sendKeys("weather today");
+        driver.findElement(By.xpath("//div[text()='Czytaj dalej']")).click();
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("//div[text()='Zaakceptuj wszystko']")).click();
+        driver.findElement(By.name("q")).sendKeys("weather today");
     }
 }
