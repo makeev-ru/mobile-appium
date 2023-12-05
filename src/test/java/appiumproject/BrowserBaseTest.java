@@ -33,7 +33,7 @@ public class BrowserBaseTest {
 
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("mobauto");
-        options.setChromedriverExecutable("/opt/homebrew/Caskroom/chromedriver/113/chromedriver-mac-arm64/chromedriver");
+        options.setChromedriverExecutable("/opt/homebrew/Caskroom/chromedriver/119.0.6045.105/chromedriver-mac-arm64/chromedriver");
         options.setCapability("browserName", "Chrome");
 
         String service_url = service.getUrl().toString();
