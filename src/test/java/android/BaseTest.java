@@ -1,4 +1,4 @@
-package appiumproject;
+package android;
 
 import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.android.AndroidDriver;
@@ -33,8 +33,8 @@ public class BaseTest {
 
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("mobauto");
-//        options.setApp("//Users//rpryimak//mobauto//src//test//java//appiumproject//resources//ApiDemos-debug.apk");
-        options.setApp("//Users//rpryimak//mobauto//src//test//java//appiumproject//resources//General-Store.apk");
+//        options.setApp("//Users//rpryimak//mobauto//src//test//java//android//resources//ApiDemos-debug.apk");
+        options.setApp("//Users//rpryimak//mobauto//src//test//java//android//resources//General-Store.apk");
         options.setChromedriverExecutable("/opt/homebrew/Caskroom/chromedriver/113/chromedriver-mac-arm64/chromedriver");
 
         String service_url = service.getUrl().toString();

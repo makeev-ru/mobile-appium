@@ -1,12 +1,10 @@
-package appiumproject;
+package android;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.DeviceRotation;
 import org.testng.annotations.Test;
-
-import java.net.MalformedURLException;
 
 public class RotateAndPasteTest extends BaseTest{
 
