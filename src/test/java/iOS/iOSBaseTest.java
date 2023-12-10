@@ -29,7 +29,8 @@ public class iOSBaseTest {
 
         XCUITestOptions options = new XCUITestOptions();
         options.setDeviceName("iPhone 15");
-        options.setApp("/Users/rpryimak/Library/Developer/Xcode/DerivedData/UIKitCatalog-diyqesxmimboqcfylmflgyyixubd/Build/Products/Debug-iphonesimulator/UIKitCatalog.app");
+//        options.setApp("/Users/rpryimak/mobauto/src/test/java/iOS/resources/UIKitCatalog.app");
+        options.setApp("/Users/rpryimak/mobauto/src/test/java/iOS/resources/TestApp 3.app");
         options.setPlatformName("17.0");
         options.setWdaLaunchTimeout(Duration.ofSeconds(20));
 

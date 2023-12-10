@@ -4,9 +4,9 @@ import io.appium.java_client.AppiumBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class iOSBasics extends iOSBaseTest {
+public class iOSBasicsTest extends iOSBaseTest {
     @Test
-    public void iOSBasicTest() {
+    public void iOSBasicsTest() {
         driver.findElement(AppiumBy.accessibilityId("Alert Views")).click();
         driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeStaticText[`name == 'Text Entry'`]")).click();
         driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeCell")).sendKeys("Hello");

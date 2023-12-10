@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class iOSScrollTest extends iOSBaseTest {
     @Test
-    public void iOSBasicTest() throws InterruptedException {
+    public void iOSScrollTest() {
         WebElement ele = driver.findElement(AppiumBy.accessibilityId("Web View"));
         Map<String, Object> params = new HashMap<>();
         params.put("direction", "down");

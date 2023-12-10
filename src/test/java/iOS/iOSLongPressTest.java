@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class iOSLongPressTest extends iOSBaseTest {
     @Test
-    public void iOSBasicTest() {
+    public void iOSLongPressTest() {
         driver.findElement(AppiumBy.accessibilityId("Steppers")).click();
         WebElement increment = driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeButton[`name == 'Increment'`][3]"));
 
