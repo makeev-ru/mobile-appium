@@ -6,12 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.net.MalformedURLException;
-
-public class LongPress extends BaseTest{
+public class LongPress extends androidConfig {
 
     @Test
-    public void LongPressGesture() throws MalformedURLException, InterruptedException {
+    public void LongPressGesture() {
 
         driver.findElement(AppiumBy.accessibilityId("Views")).click();
         driver.findElement(AppiumBy.accessibilityId("Expandable Lists")).click();
@@ -21,12 +19,8 @@ public class LongPress extends BaseTest{
 
         longPressAction(element);
 
-
         String menuText = driver.findElement(By.id("android:id/title")).getText();
         Assert.assertEquals(menuText, "Sample menu");
         Assert.assertTrue(driver.findElement(By.id("android:id/title")).isDisplayed());
-
-
-
     }
 }

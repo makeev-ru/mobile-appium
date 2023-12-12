@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 
-public class ScrollTest extends BaseTest{
+public class ScrollTest extends androidConfig {
 
     @Test
     public void ScrollMenu() throws MalformedURLException, InterruptedException {
@@ -15,6 +15,5 @@ public class ScrollTest extends BaseTest{
 //                "new UiScrollable(new UiSelector()).scrollIntoView(text(\"WebView\"));"));
 
         scrollToEndAction();
-
     }
 }

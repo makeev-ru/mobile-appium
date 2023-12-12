@@ -6,7 +6,7 @@ import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.DeviceRotation;
 import org.testng.annotations.Test;
 
-public class RotateAndPasteTest extends BaseTest{
+public class RotateAndPasteTest extends androidConfig {
 
     @Test
     public void RotateAndPaste() {

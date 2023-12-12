@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class eCommerce_TC_1 extends BaseTest{
+public class eCommerce_TC_1 extends androidConfig {
 
     @Test
     public void FillForm() throws InterruptedException {

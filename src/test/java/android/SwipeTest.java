@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SwipeTest extends BaseTest{
+public class SwipeTest extends androidConfig {
 
     @Test
     public void ScrollMenu() {
@@ -21,6 +21,5 @@ public class SwipeTest extends BaseTest{
         swipeAction(firstImage,"left");
         Assert.assertEquals(driver.findElement(By.xpath("(//android.widget.ImageView)[1]"))
                 .getAttribute("focusable"),"false");
-
     }
 }

@@ -16,7 +16,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-public class BaseTest {
+public class androidConfig {
 
     public AndroidDriver driver;
     public AppiumDriverLocalService service;

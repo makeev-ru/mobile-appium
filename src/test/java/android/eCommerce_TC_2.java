@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class eCommerce_TC_2 extends BaseTest {
+public class eCommerce_TC_2 extends androidConfig {
 
     @Test
     public void AddToCart() throws InterruptedException {
@@ -42,10 +42,7 @@ public class eCommerce_TC_2 extends BaseTest {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.attributeContains(driver.findElement(By.id("com.androidsample.generalstore:id/toolbar_title")), "text", "Cart"));
 
-
         String productNameInCart = driver.findElement(By.id("com.androidsample.generalstore:id/productName")).getText();
         Assert.assertEquals(productNameInCart, "Jordan 6 Rings");
-
-
     }
 }

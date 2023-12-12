@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DragDropTest extends BaseTest {
+public class DragDropTest extends androidConfig {
 
     @Test
     public void DragAndDrop() throws InterruptedException {

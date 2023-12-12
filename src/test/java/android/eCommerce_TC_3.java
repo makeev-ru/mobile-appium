@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.List;
 
-public class eCommerce_TC_3 extends BaseTest {
+public class eCommerce_TC_3 extends androidConfig {
 
     @Test
     public void AddToCart() throws InterruptedException {
