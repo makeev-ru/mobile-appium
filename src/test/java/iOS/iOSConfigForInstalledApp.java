@@ -12,7 +12,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-public class iOSBaseForInstalledApp {
+public class iOSConfigForInstalledApp {
 
     public IOSDriver driver;
     public AppiumDriverLocalService service;

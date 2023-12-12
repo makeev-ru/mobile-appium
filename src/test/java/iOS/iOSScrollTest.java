@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-public class iOSScrollTest extends iOSBaseTest {
+public class iOSScrollTest extends iOSConfig {
     @Test
     public void iOSScrollTest() {
         WebElement ele = driver.findElement(AppiumBy.accessibilityId("Web View"));

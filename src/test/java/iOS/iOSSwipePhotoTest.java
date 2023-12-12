@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class iOSSwipePhotoTest extends iOSBaseForInstalledApp {
+public class iOSSwipePhotoTest extends iOSConfigForInstalledApp {
     @Test
     public void iOSSwipePhotoTest() {
         Map<String, String> params = new HashMap<>();

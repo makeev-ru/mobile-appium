@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-public class iOSLongPressTest extends iOSBaseTest {
+public class iOSLongPressTest extends iOSConfig {
     @Test
     public void iOSLongPressTest() {
         driver.findElement(AppiumBy.accessibilityId("Steppers")).click();

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class iOSSliderTest extends iOSBaseTest {
+public class iOSSliderTest extends iOSConfig {
     @Test
     public void iOSSliderTest() throws InterruptedException {
         WebElement slider = driver.findElement(AppiumBy.iOSClassChain("**/XCUIElementTypeSlider[`name == 'AppElem'`]"));
