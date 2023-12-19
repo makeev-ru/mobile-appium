@@ -4,6 +4,7 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import org.example.pageObjects.iOS.HomePage;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -16,6 +17,7 @@ public class iOSConfig {
 
     public IOSDriver driver;
     public AppiumDriverLocalService service;
+    public HomePage homePage;
 
     @BeforeClass
     public void configureAppium() throws MalformedURLException {
@@ -29,14 +31,15 @@ public class iOSConfig {
 
         XCUITestOptions options = new XCUITestOptions();
         options.setDeviceName("iPhone 15");
-//        options.setApp("/Users/rpryimak/mobauto/src/test/java/iOS/resources/UIKitCatalog.app");
-        options.setApp("/Users/rpryimak/mobauto/src/test/java/iOS/resources/TestApp 3.app");
+        options.setApp("/Users/rpryimak/mobauto/src/test/java/iOS/resources/UIKitCatalog.app");
+//        options.setApp("/Users/rpryimak/mobauto/src/test/java/iOS/resources/TestApp 3.app");
         options.setPlatformName("17.0");
         options.setWdaLaunchTimeout(Duration.ofSeconds(20));
 
         String service_url = service.getUrl().toString();
         driver = new IOSDriver(new URL(service_url), options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        homePage = new HomePage(driver);
     }
 
 
