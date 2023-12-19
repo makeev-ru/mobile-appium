@@ -8,55 +8,42 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 
-public class IOSActions {
+import java.util.HashMap;
+import java.util.Map;
+
+public class IOSActions extends commonActions{
 
     IOSDriver driver;
 
     public IOSActions(IOSDriver driver) {
+        super(driver);
         this.driver = driver;
 
     }
 
-//    public void longPressAction(WebElement element) {
-//        ((JavascriptExecutor) driver).executeScript("mobile: longClickGesture",
-//                ImmutableMap.of("elementId", ((RemoteWebElement) element).getId(),
-//                        "duration", 2000));
-//    }
-//
-//    public void scrollToEndAction() {
-//        boolean canScrollMore;
-//        do {
-//            canScrollMore = (Boolean) ((JavascriptExecutor) driver).executeScript("mobile: scrollGesture", ImmutableMap.of(
-//                    "left", 100, "top", 100, "width", 200, "height", 200,
-//                    "direction", "down",
-//                    "percent", 3.0
-//            ));
-//        } while (canScrollMore);
-//    }
-//
-//    public void scrollToText(String text) {
-//        driver.findElement(AppiumBy.androidUIAutomator(
-//                "new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + text + "\"));"));
-//    }
-//
-//    public void swipeAction(WebElement ele, String direction) {
-//        ((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", ImmutableMap.of(
-//                "elementId", ((RemoteWebElement) ele).getId(),
-//                "direction", direction,
-//                "percent", 0.75
-//        ));
-//    }
-//
-//    public void dragAndDropAction(WebElement ele, int endX, int endY) {
-//        ((JavascriptExecutor) driver).executeScript("mobile: dragGesture", ImmutableMap.of(
-//                "elementId", ((RemoteWebElement) ele).getId(),
-//                "endX", endX,
-//                "endY", endY
-//        ));
-//    }
-//
-//    public Double getFormattedAmount(String amount) {
-//        Double price = Double.parseDouble(amount.substring(1));
-//        return price;
-//    }
+    public void longPressAction(WebElement element) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("element", ((RemoteWebElement)element).getId());
+        params.put("duration", 5);
+
+        driver.executeScript("mobile:touchAndHold", params);
+    }
+
+    public void scrollToElement(WebElement ele) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("direction", "down");
+        params.put("element", ((RemoteWebElement)ele).getId());
+
+        driver.executeScript("mobile:scroll", params);
+    }
+
+
+    public void swipeToEnd(int swipes, String direction) {
+        Map<String, String> params1 = new HashMap<>();
+        params1.put("direction", direction);
+
+        for (int i = 0; i < swipes; i++) {
+            driver.executeScript("mobile:swipe", params1);
+        }
+    }
 }
