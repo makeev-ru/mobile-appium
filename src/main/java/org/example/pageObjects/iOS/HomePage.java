@@ -20,6 +20,22 @@ public class HomePage extends IOSActions {
     @iOSXCUITFindBy(accessibility="Alert Views")
     private WebElement alertViews;
 
+    @iOSXCUITFindBy(accessibility="Web View")
+    private WebElement webView;
+
+    @iOSXCUITFindBy(accessibility="Picker View")
+    private WebElement pickerView;
+
+    public void openWebView(){
+        scrollToElement(webView);
+        webView.click();
+    }
+
+    public PickerView openPickerView(){
+        pickerView.click();
+        return new PickerView(driver);
+    }
+
     public AlertViews selectAlertViews(){
         alertViews.click();
         return new AlertViews(driver);
