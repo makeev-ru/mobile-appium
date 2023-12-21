@@ -5,6 +5,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import org.example.pageObjects.android.FormPage;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
@@ -20,6 +21,7 @@ public class androidConfig {
 
     public AndroidDriver driver;
     public AppiumDriverLocalService service;
+    public FormPage formPage;
 
     @BeforeClass
     public void configureAppium() throws MalformedURLException {
@@ -40,8 +42,7 @@ public class androidConfig {
         String service_url = service.getUrl().toString();
         driver = new AndroidDriver(new URL(service_url), options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-
+        formPage = new FormPage(driver);
     }
 
     public void longPressAction(WebElement element) {
