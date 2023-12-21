@@ -1,5 +1,6 @@
 package android;
 
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.example.pageObjects.android.CartPage;
 import org.example.pageObjects.android.ProductCatalogue;
 import org.openqa.selenium.By;
@@ -33,6 +34,12 @@ public class eCommerce_TC_2 extends androidConfig {
 
     @DataProvider
     public Object[][] getData(){
-        return new Object[][] {{"TestName1", "female", "Argentina"}};
+        return new Object[][] {{"TestName1", "female", "Argentina"}, {"TestName2", "male", "Belarus"}};
+    }
+
+    @BeforeMethod
+    public void backToHomePage(){
+        driver.navigate().back();
+        driver.navigate().back();
     }
 }
