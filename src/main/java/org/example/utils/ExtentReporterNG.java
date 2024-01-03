@@ -6,8 +6,8 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 public class ExtentReporterNG {
     static ExtentReports extent;
 
-    public static ExtentReports getReporterObject(){
-        String path = System.getProperty("user.dir")+"//reports//index.html";
+    public static ExtentReports getReporterObject() {
+        String path = System.getProperty("user.dir") + "//reports//index.html";
         ExtentSparkReporter reporter = new ExtentSparkReporter(path);
         reporter.config().setReportName("Mobile Automation Results");
         reporter.config().setDocumentTitle("Test Results");
@@ -17,7 +17,6 @@ public class ExtentReporterNG {
         extent.setSystemInfo("QA", "Makeev");
 
         return extent;
-
 
 
     }

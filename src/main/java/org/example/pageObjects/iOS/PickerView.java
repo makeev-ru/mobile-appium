@@ -3,11 +3,11 @@ package org.example.pageObjects.iOS;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import org.example.utils.IOSActions;
+import org.example.utils.IOSUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class PickerView extends IOSActions {
+public class PickerView extends IOSUtils {
 
     IOSDriver driver;
 

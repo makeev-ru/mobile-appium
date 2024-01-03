@@ -1,6 +1,5 @@
 package android;
 
-import io.appium.java_client.android.nativekey.KeyEvent;
 import org.example.pageObjects.android.CartPage;
 import org.example.pageObjects.android.ProductCatalogue;
 import org.openqa.selenium.By;
@@ -29,7 +28,7 @@ public class eCommerce_TC_2 extends androidConfig {
         wait.until(ExpectedConditions.attributeContains(driver.findElement(By.id("com.androidsample.generalstore:id/toolbar_title")), "text", "Cart"));
 
         String productNameInCart = cartPage.getProductNameInCart();
-        Assert.assertEquals(productNameInCart, "Jordan 6 Rings");
+        Assert.assertEquals(productNameInCart, "Jordan 62 Rings");
     }
 
     @DataProvider

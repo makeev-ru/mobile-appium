@@ -3,11 +3,11 @@ package org.example.pageObjects.android;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.example.utils.AndroidActions;
+import org.example.utils.AndroidUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class CartPage extends AndroidActions {
+public class CartPage extends AndroidUtils {
 
     AndroidDriver driver;
 

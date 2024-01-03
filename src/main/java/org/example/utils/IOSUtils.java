@@ -1,24 +1,18 @@
 package org.example.utils;
 
-import com.google.common.collect.ImmutableMap;
-import io.appium.java_client.AppiumBy;
-import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class IOSActions extends commonActions{
+public class IOSUtils extends AppiumUtils {
 
     IOSDriver driver;
 
-    public IOSActions(IOSDriver driver) {
-        super(driver);
+    public IOSUtils(IOSDriver driver) {
         this.driver = driver;
-
     }
 
     public void longPressAction(WebElement element) {
